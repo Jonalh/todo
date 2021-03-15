@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    color: #202020;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(30deg, rgba(10, 180, 255, 1) 0%, rgba(177, 255, 215, 1) 100%);
+}
+
+input {
+    padding: 5px 0 5px 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    overflow: scroll;
+    -webkit-box-shadow: 5px 5px 4px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 5px 5px 4px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputContainer input,
+button {
+    border: none;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+.inputContainer input {
+    width: 100%;
+    border: 1px solid #EBEBEB;
+}
+
+.inputContainer button {
+    background-color: #aaf683;
+    margin-left: 10px;
+    color: #ffffff;
+    width: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 0;
+}
+
+span {
+    background-color: #EBEBEB;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 40px 40px;
+    align-items: center;
+    margin-bottom: 10px;
+    line-height: 0;
+}
+
+#completeBtn {
+    background-color: #aaf683;
+}
+
+span li {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+span button {
+    height: 40px;
+    width: 40px;
+    background-color: #ee6055;
+    place-self: end;
+}
+
+i {
+    color: white;
+}

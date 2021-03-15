@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <script src="https://kit.fontawesome.com/a8af786864.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inputContainer">
+            <input type=text id="todo" placeholder="Add something to your list" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Add something to your list'" maxlength="20" autocomplete="off"></input>
+            <button onclick="myFunction()" id="myBtn"><i class="fas fa-plus"></i></button>
+        </div>
+        <ul id="todoList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
