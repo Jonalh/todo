@@ -21,6 +21,7 @@ function myFunction() {
     let completeBtn = document.createElement("BUTTON");
     let deleteBtn = document.createElement("BUTTON");
     let isCompleted = false;
+    textNode.className = "listElement";
     completeBtn.setAttribute("id", "completeBtn");
     completeBtn.className = "completeBtn";
     deleteBtn.setAttribute("id", "deleteBtn");
@@ -35,6 +36,7 @@ function myFunction() {
       listSpan.style.backgroundColor = "#616161";
       completeBtn.style.backgroundColor = "#00897b";
       deleteBtn.style.backgroundColor = "#c62828";
+      textNode.style.color = "#ffffff";
     }
     
     completeBtn.addEventListener("click", function(){
@@ -78,11 +80,14 @@ darkMode.addEventListener("click", function(){
     todoInput.style.border = "none";
     addBtn.style.backgroundColor = "#00897b";
     let elements = document.getElementsByClassName("elementList");
+    let listElement = document.getElementsByClassName("listElement");
     let completeBtn = document.getElementsByClassName("completeBtn");
     let deleteBtn = document.getElementsByClassName("deleteBtn");
     for (var i=0; i<elements.length; i++) {
         elements[i].style.backgroundColor = "#616161";
-        elements[i].style.color = "#ffffff";
+    }
+    for (var i=0; i<listElement.length; i++) {
+        listElement[i].style.color = "#ffffff";
     }
     for (var i=0; i<completeBtn.length; i++) {
         completeBtn[i].style.backgroundColor = "#00897b";
@@ -100,11 +105,14 @@ darkMode.addEventListener("click", function(){
     todoInput.style.border = "1px solid #EBEBEB";
     addBtn.style.backgroundColor = "#aaf683";
     let elements = document.getElementsByClassName("elementList");
+    let listElement = document.getElementsByClassName("listElement");
     let completeBtn = document.getElementsByClassName("completeBtn");
     let deleteBtn = document.getElementsByClassName("deleteBtn");
     for (var i=0; i<elements.length; i++) {
         elements[i].style.backgroundColor = "#ebebeb";
-        elements[i].style.color = "#202020";
+    }
+    for (var i=0; i<listElement.length; i++) {
+        listElement[i].style.color = "#202020";
     }
     for (var i=0; i<completeBtn.length; i++) {
         completeBtn[i].style.backgroundColor = "#aaf683";
