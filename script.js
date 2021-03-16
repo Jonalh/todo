@@ -41,16 +41,23 @@ function myFunction() {
     
     completeBtn.addEventListener("click", function(){
       isCompleted = !isCompleted;
-      if (isCompleted) {
-        listSpan.style.backgroundColor =  "#aaf683";
+      if (isCompleted && !isDark) {
+        listSpan.style.backgroundColor = "#aaf683";
         textNode.style.color = "white";
         completeBtn.innerHTML="<i class='fas fa-times'></i>";
+      } else if (isCompleted && isDark) {
+        listSpan.style.backgroundColor = "#00897b";
+        completeBtn.innerHTML="<i class='fas fa-times'></i>";
+      } else if (!isCompleted && isDark) {
+        listSpan.style.backgroundColor = "#616161";
+        completeBtn.innerHTML="<i class='fas fa-check'></i>";
       } else {
         listSpan.style.backgroundColor =  "#ebebeb";
         textNode.style.color = "#202020";
         completeBtn.innerHTML="<i class='fas fa-check'></i>";
       }
     });
+    
     
     deleteBtn.addEventListener("click", function(){
       listSpan.remove();
@@ -94,7 +101,7 @@ darkMode.addEventListener("click", function(){
     }
     for (var i=0; i<deleteBtn.length; i++) {
         deleteBtn[i].style.backgroundColor = "#c62828";
-    }
+    };
   } else {
     container.style.backgroundColor = "#ffffff";
     darkMode.style.backgroundColor = "#212121";
